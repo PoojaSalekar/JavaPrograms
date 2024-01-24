@@ -1,0 +1,114 @@
+Question 3
+
+Write a java program to validate the age of a person and display proper message by using user defined exception. 
+Age of a person should be above 15.
+Your task here is to implement a Java code based on the following specifications. Note that your
+code should match the specifications in a precise manner. 
+Consider default visibility of classes, data fields and methods unless mentioned otherwise.
+Specifications:
+class definitions:
+class MyException: Define exception
+class Source:
+method definitons:
+checkAge(int age): throw a user defined exception if age is smaller than 15
+visibility: public
+Task
+• Define MyException class
+• Create a class Source and implement the below given method
+• String checkAge(int age): throw a user defined exception if age is smaller than 15
+Sample Input
+22
+Sample Output
+valid
+
+Question 2
+
+Distance Traveled
+Problem Statement:
+Write a program to calculate the distance travelled by car at different time intervals. The initial velocity of the car is 36km/hr and the constant acceleration is 5 m/s2.
+The formula to calculate distance is:
+Distance Travelled = u*t+((a*t*t)/2) where,
+u = initial velocity of the car (36 km/hr)
+a = acceleration of the car (5 m/s )
+t = time duration in seconds
+
+The program should accept 2-time intervals as the input (one-time interval per line) and print the distance travelled in meters by car (one output per line).
+Definitions:
+1 kilometer = 1000 meters
+1 hour = 3600 seconds
+Sample Input
+10
+8
+Sample Output
+350
+240
+
+Q 4
+Your task here is to implement a Java code based on the following specifications. 
+Note that your code should match the specifications in a precise manner. 
+Consider default visibility of class unless mentioned otherwise.
+Specifications:
+﻿class definitions:
+class Customer:
+data fields:
+int id
+String name
+double walletBalance
+String address
+method definitions:
+Define a parameterized constructor with public visibility
+
+class Item:
+data fields:
+int id
+String name
+String companyName
+double price
+boolean isInStock
+method definitions:
+Define a parameterized constructor with public visibility
+
+class ShoppingWebsite:
+method definition:
+purchaseItem(Item i, Customer c) throws ItemOutOfStockException,InsufficientBalanceException:
+return type: String
+visibility: public
+
+class InsufficientBalanceException extends Exception:
+method definition:
+InsufficientBalanceException(String message):
+visibility: public
+
+class ItemOutOfStockException extends Exception:
+method definition:
+ItemOutOfStockException(String message):
+visibility: public
+
+Task:
+-Implement class Customer according to the above specifications
+-Implement class Item according to the above specifications
+-Class ShoppingWebsite
+String purchaseItem(Item i, Customer c) throws ItemOutOfStockException,InsufficientBalanceException:
+• Throw an ItemOutOfStockException when the item is out of stock with the message "item is out of stock".
+
+• Throw an InsufficientBalanceException when customer wallet balance is not
+sufficient(Item price is greater than the wallet balance) with the message "customer wallet balance is not sufficient".
+• If no exception found then return "Order Successful".
+
+-class InsufficientBalanceException
+• define custom exception class InsufficientBalanceException by extending the Exception class.
+• define a parameterized constructor with a String argument to pass the message to the super class.
+
+-class ItemOutOfStockException
+• define custom exception class ItemOutOfStockException by extending the Exception class.
+• define a parameterized constructor with a String argument to pass the message to the super class.
+
+Sample Testcase:
+Input:
+Customer cusDet = new Customer(927392, "Steve" ,5000.0, "USA");
+Item itemDet = new Item(27392, "T-Shirt", "US polo", 800, true);
+ShoppingWebsite obj = new ShoppingWebsite();
+String out = obj.purchaseItem(itemDet, cusDet);
+
+output:
+out = "Order Successful"
